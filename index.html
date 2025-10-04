@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HK Properties</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #1e3c72;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav {
+      background: #16335b;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #1e3c72;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .project {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      width: 480px;
+      overflow: hidden;
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+    }
+    .project-details {
+      padding: 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: auto;
+    }
+    form input, form button {
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #1e3c72;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #16335b;
+    }
+    footer {
+      background: #1e3c72;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="CC8C0EE2-39AB-4F58-84F1-681BC967D068.jpeg" alt="HK Properties Logo">
+    <h1>HK Properties</h1>
+    <p>Trusted Real Estate Investments</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#projects">Current Projects</a>
+    <a href="#book">Book Your Site</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p><strong>HK Properties</strong>, founded by <strong>Huzair Khatri</strong>, is a trusted name in real estate. 
+       We believe in delivering only safe and profitable investment opportunities. 
+       Every project we showcase is carefully verified to ensure transparency and reliability. 
+       With us, you are not just buying property—you are securing a safe future.</p>
+  </section>
+
+  <!-- Current Projects -->
+  <section id="projects">
+    <h2>Current Projects</h2>
+    <div class="projects">
+
+      <!-- Saras Project -->
+      <div class="project">
+        <img src="IMG_0733.jpeg" alt="Saras Avenue 1">
+        <img src="IMG_0735.jpeg" alt="Saras Avenue 2">
+        <div class="project-details">
+          <h3>Saras Avenue – Santacruz West</h3>
+          <p>Luxury project offering both Commercial & Residential spaces. 
+             Perfect blend of comfort, convenience, and premium living in the heart of the city.</p>
+        </div>
+      </div>
+
+      <!-- Global Square Residency -->
+      <div class="project">
+        <img src="D922CE14-E3D5-4EC6-ACD5-9D901B645E37.jpeg" alt="Global Square Residency 1">
+        <img src="IMG_0107.jpeg" alt="Global Square Residency 2">
+        <div class="project-details">
+          <h3>Global Square Residency – Andheri West</h3>
+          <p>14-storey luxury tower with 1BHK and 2BHK apartments, along with commercial spaces. 
+             A premium address that combines work and lifestyle.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Book Your Site -->
+  <section id="book">
+    <h2>Book Your Site Visit</h2>
+    <form onsubmit="sendWhatsApp(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="date" id="date" required>
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 +91 8433599535</p>
+    <p>📧 huzairkhatri12@gmail.com</p>
+    <p>📷 Instagram: <a href="https://instagram.com/hk_propertiesss" target="_blank">@hk_propertiesss</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HK Properties | Designed with Trust</p>
+  </footer>
+
+  <script>
+    function sendWhatsApp(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const date = document.getElementById("date").value;
+      const phone = "918433599535"; // Your WhatsApp number
+      const msg = `Hello, I am ${name}. I want to book a site visit on ${date}.`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+  </script>
+
+</body>
+</html>
